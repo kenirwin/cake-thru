@@ -75,8 +75,20 @@
             <?php foreach ($woman->roles as $roles): ?>
             <tr>
                 <td><?= h($roles->id) ?></td>
+		<? 
+		$curr_convent_id = $roles->convent_id; 
+		$convents = $woman->convents;
+/*
+		foreach ($convents as $convent) {
+			if ($convent->id == $curr_convent_id) {
+			$convent_name = $convent->name;
+}
+}
+*/			
+//		$convent = $convents->find($role_convent_id)->name;
+		?>
                 <td><?= h($roles->woman_id) ?></td>
-                <td><?= h($roles->convent_id) ?></td>
+                <td><?= h($convent_name) ?></td>
                 <td><?= h($roles->role) ?></td>
                 <td><?= h($roles->start_date) ?></td>
                 <td><?= h($roles->end_date) ?></td>
