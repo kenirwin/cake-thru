@@ -39,6 +39,11 @@ class ConventsTable extends Table
         $this->hasMany('Roles', [
             'foreignKey' => 'convent_id'
         ]);
+
+        $this->belongsToMany('Women', [
+            'through' => 'Roles'
+        ]);
+
     }
 
     /**

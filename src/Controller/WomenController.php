@@ -36,7 +36,7 @@ class WomenController extends AppController
     public function view($id = null)
     {
         $woman = $this->Women->get($id, [
-            'contain' => ['Portraits', 'Roles']
+					 'contain' => ['Portraits', 'Roles', 'Convents']
         ]);
 
         $this->set('woman', $woman);

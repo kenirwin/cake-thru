@@ -36,7 +36,7 @@ class ConventsController extends AppController
     public function view($id = null)
     {
         $convent = $this->Convents->get($id, [
-            'contain' => ['Roles']
+					      'contain' => ['Roles','Women']
         ]);
 
         $this->set('convent', $convent);
