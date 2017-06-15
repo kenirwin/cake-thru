@@ -64,9 +64,7 @@
         <?php if (!empty($woman->roles)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
-                <th scope="col"><?= __('Id') ?></th>
-                <th scope="col"><?= __('Woman Id') ?></th>
-                <th scope="col"><?= __('Convent Id') ?></th>
+                <th scope="col"><?= __('Convent') ?></th>
                 <th scope="col"><?= __('Role') ?></th>
                 <th scope="col"><?= __('Start Date') ?></th>
                 <th scope="col"><?= __('End Date') ?></th>
@@ -74,7 +72,6 @@
             </tr>
             <?php foreach ($woman->roles as $roles): ?>
             <tr>
-                <td><?= h($roles->id) ?></td>
 		<? 
 		$curr_convent_id = $roles->convent_id; 
 		$convents = $woman->convents;
@@ -86,8 +83,8 @@
 }
 */			
 //		$convent = $convents->find($role_convent_id)->name;
+		$convent_name = "I want to get the convent name!";
 		?>
-                <td><?= h($roles->woman_id) ?></td>
                 <td><?= h($convent_name) ?></td>
                 <td><?= h($roles->role) ?></td>
                 <td><?= h($roles->start_date) ?></td>
